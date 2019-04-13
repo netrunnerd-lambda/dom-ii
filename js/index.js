@@ -10,9 +10,10 @@ const funBusRave = _ => {
       g = Math.floor(Math.random() * 255),
       b = Math.floor(Math.random() * 255);
 
- groot.style.backgroundColor = `rgb(${r}, ${g}, ${b})`; 
- header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
- footer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  groot.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  groot.style.color = `rgb(${r + 25}, ${g + 25}, ${b + 25})`;
+  header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  footer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
 const ohNoes = _ => {
