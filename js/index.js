@@ -22,6 +22,7 @@ const ohNoes = _ => {
   window.removeEventListener('mousemove', funBusRave);
   window.removeEventListener('resize', funBusRave);
   window.removeEventListener('scroll', funBusRave);
+  window.removeEventListener('wheel', funBusRave);
 
   groot.style.backgroundColor = '';
   groot.style.color = '';
@@ -52,6 +53,7 @@ window.addEventListener('load', _ => {
 window.addEventListener('mousemove', funBusRave);
 window.addEventListener('resize', funBusRave);
 window.addEventListener('scroll', funBusRave);
+window.addEventListener('wheel', funBusRave);
 
 header.addEventListener('click', _ => console.log('YEET'));
 
@@ -72,9 +74,13 @@ navLinks.forEach(link => {
   });
 });
 
+footer.addEventListener('drag', e => console.log(e));
+footer.addEventListener('drop', e => console.log(e));
+
 footer.appendChild(document.createElement('br'));
 footer.appendChild(document.createElement('textarea'));
 
 const footerText = select('footer textarea');
 
+footerText.addEventListener('focus', e => console.log(e));
 footerText.addEventListener('select', e => console.log(e));
